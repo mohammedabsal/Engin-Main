@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.back-link {
+    color: #4b5563;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    color: #111827;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: #2563eb;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.connections-btn {
+    background-color: #dbeafe;
+    color: #2563eb;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.edit-section {
+    text-align: right;
+}
+
+#editProfileButton {
+    background-color: #10b981;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-picture-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Camera icon positioning */
+.upload-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+}
+
+/* Hide default file input */
+#profilePictureInput {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/* Add left padding only for inputs that have icons */
+.form-group.has-icon input, 
+.form-group.has-icon select {
+    padding-left: 35px; 
+}
+
+/* Icon positioning inside input fields */
+.form-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* Icon positioning inside input fields (centered) */
+.form-group.has-icon {
+    position: relative;
+}
+
+
+.form-group.has-icon i {
+    position: absolute;
+    left: 12px; /* Keeps space from the left */
+    top: 50%;  /* Moves it to the vertical middle */
+    transform: translateY(-50%); /* Perfect centering */
+    color: #6b7280;
+    font-size: 16px;
+    pointer-events: none;
+    padding-top: 21px;
+}
+
+/* Focus effect */
+input:focus, textarea:focus, select:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+.form-actions {
+    text-align: right;
+}
+
+#saveChangesButton {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+

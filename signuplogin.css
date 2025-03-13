@@ -1,0 +1,391 @@
+/* General styles */
+body {
+    background-color: #ebf4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Social login buttons */
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap; /* Ensures buttons stay on the same line */
+}
+
+.social-login button {
+    flex: 1; /* Ensures equal width */
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    min-width: 140px; /* Prevents excessive shrinking */
+}
+
+.github {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.github:hover {
+    background-color: #333;
+    color: white;
+}
+
+.google {
+    background-color: #f3f3f3;
+    color: #db4437;
+}
+
+.google:hover {
+    background-color: #db4437;
+    color: white;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: gray;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid lightgray;
+    margin: 0 10px;
+}
+
+/* Role selection */
+.role-text {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.role-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.role-selection button {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    transition: all 0.3s ease;
+}
+
+.role-selection button i {
+    margin-right: 6px;
+}
+
+/* Active state */
+.role-selection button.active {
+    background-color: #ebf8ff;
+    color: #3182ce;
+    border: 1px solid #3182ce;
+}
+
+/* Ensure input group handles errors properly */
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* Increased to allow space for error messages */
+    width: 100%;
+}
+
+/* Input field adjustments */
+.input-group input {
+    width: 100%;
+    padding: 14px 10px 14px 40px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.input-group input:focus {
+    border: 2px solid #3182ce;
+    outline: none;
+    background-color: #ebf8ff;
+}
+
+/* Input field icons should always be centered */
+.input-group .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Prevents interaction issues */
+}
+
+/* Error message styling */
+.error-message {
+    font-size: 12px;
+    color: red;
+    text-align: left;
+    margin-top: 5px; /* Ensures proper spacing */
+    white-space: normal; /* Ensures text wraps properly */
+    position: absolute;
+    bottom: -18px; /* Keeps it positioned below without shifting input field */
+    left: 0;
+}
+
+/* Ensure error message does not overlap */
+.password-group {
+    position: relative;
+    margin-bottom: 50px; /* Extra space for the error message */
+}
+
+/* Hide the browser's built-in password visibility toggle */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+/* Error message styling */
+.password-group .error-message {
+    position: absolute;
+    bottom: -30px; /* Adjust spacing */
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: red;
+    text-align: left;
+    white-space: normal;
+}
+
+/* Red border when input is invalid */
+.error-border {
+    border: 2px solid red !important;
+}
+
+/* Options (Remember me & Forgot password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    flex-wrap: nowrap; /* Ensures they stay in the same line */
+    width: 100%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.checkbox input {
+    margin-right: 5px;
+    accent-color: #3182ce;
+}
+
+.forgot-password {
+    color: #3182ce;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents moving to the next line */
+    margin-left: auto; /* Pushes to the right */
+}
+
+/* Sign in button */
+.signin-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Sign up text */
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+/* --- Responsive Fix for Mobile & Tablet Screens --- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .social-login {
+        flex-wrap: nowrap; /* Ensures GitHub and Google buttons stay in the same line */
+    }
+
+    .social-login button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .role-selection {
+        flex-direction: column;
+    }
+
+    .role-selection button {
+        width: 100%;
+    }
+
+    /* Fix: Keep "Remember Me" & "Forgot Password" on the same line */
+    .options {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+
+    .forgot-password {
+        white-space: nowrap; /* Ensures it stays in the same line */
+        margin-left: auto; /* Pushes to the right */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .social-login {
+        flex-wrap: nowrap; /* Keeps buttons in a single row */
+    }
+
+    .social-login button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .role-selection {
+        flex-direction: column;
+    }
+
+    .role-selection button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 12px 10px 12px 40px;
+    }
+
+    .signin-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .signup-text {
+        font-size: 13px;
+    }
+
+    /* Fix: Keep "Remember Me" & "Forgot Password" on the same line */
+    .options {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .forgot-password {
+        white-space: nowrap;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,542 @@
+/*Header Starts Here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Logo */
+.site-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    /*text-shadow: 0 0 10px cyan;*/
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Menu Links */
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-links li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+
+/* Hover Effects */
+.menu-links li a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Underline Effect on Hover */
+.menu-links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-links li:hover::after {
+    width: 100%;
+}
+
+/* Get Started Button */
+.cta-button {
+    background: cyan;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: white;
+    color: cyan;
+    transform: scale(1.1);
+}
+
+/* Landing Section */
+.landing-section {
+    width: 100%;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?earth,space') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Increased size of landing content */
+.landing-content {
+    max-width: 900px;
+    padding: 30px;
+    backdrop-filter: blur(4px);
+}
+
+/* Gradient Effect for Title */
+.title-effect {
+    font-size: 4rem; /* Increased size */
+    font-weight: bold;
+    background: linear-gradient(90deg, cyan, white); /* Gradient from cyan to white */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* Remove existing text shadow */
+}
+
+p {
+    font-size: 1.5rem; /* Increased text size */
+    color: #ccc;
+    margin-top: 15px;
+}
+
+/* Main Action Button */
+.main-action-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 1.5rem;
+    color: black;
+    background: cyan;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.main-action-btn:hover {
+    background: white;
+    color: cyan;
+    transform: scale(1.1);
+}
+
+/* Subtext */
+.sub-text {
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.sub-text span {
+    color: cyan;
+    font-weight: bold;
+}
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-container.active {
+        display: flex;
+    }
+
+    /* Responsive Landing Section */
+    .landing-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .title-effect {
+        font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .main-action-btn {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Header ends here */
+
+
+/* About Engin Starts Here*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-box {
+    background: rgba(10, 10, 10, 0.8);
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    transition: 0.3s ease-in-out;
+}
+
+.content-box:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+    transform: scale(1.02);
+}
+
+h1 {
+    color: cyan;
+    font-weight: 600;
+    text-shadow: 0 0 10px cyan;
+    font-size: 28px;
+}
+
+.content-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.highlight {
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 8px cyan;
+}
+/*
+.glow-text {
+    font-weight: 600;
+    color: rgb(194, 248, 248);
+    text-shadow: 0 0 12px cyan, 0 0 20px cyan;
+    animation: glow 1.5s infinite alternate;
+} */
+
+/* Glow Animation 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    }
+    to {
+        text-shadow: 0 0 20px cyan, 0 0 30px cyan;
+    }
+} */
+
+/* About Engin Ends Here*/
+
+/*Unleash Your Potential Starts here */
+
+.container {
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger cards */
+    gap: 40px; /* Increased spacing between boxes */
+    max-width: 1200px; /* Increased max width */
+    margin: auto;
+    padding: 20px; /* More spacing around the section */
+}
+
+
+.card {
+    background: rgba(0, 0, 0, 0.6); /* Matching the background with slight transparency */
+    padding: 30px; /* Increased spacing inside the box */
+    border-radius: 15px;
+    border: 2px solid transparent;
+    box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 255, 255, 0.4);
+    border-color: cyan;
+}
+
+
+.icon {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto',sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    color: #ccc;
+    font-family: 'Adorn',serif;
+}
+
+
+
+/*Unleash Your Potential Ends here */
+
+/* Ready to launch your startup & get in touch starts here*/
+
+/* CTA Card */
+.cta-card {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    padding: 60px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 900px;
+    margin: 80px auto;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Add more spacing between paragraph & button */
+.cta-card p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: cyan;
+    color: black;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    box-shadow: none; /* No background color change */
+}
+
+.cta-button .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+.cta-button:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 80px;
+    text-align: center;
+    padding: 40px 20px;
+    background: black; /* Ensuring the background matches */
+}
+
+/* Neon Effect for "Get in Touch" */
+.neon-text {
+    font-size: 36px; /* Reduced size */
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0 0 6px cyan, 0 0 12px white; /* Reduced glow intensity */
+    margin-bottom: 15px;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* "Get in" (cyan) and "Touch" (white) */
+.neon-text span {
+    color: white;
+}
+
+/* Hover Effect - Slightly Brighter */
+.neon-text:hover {
+    text-shadow: 0 0 10px cyan, 0 0 20px white; /* Reduced hover glow */
+}
+
+/* Email */
+.email {
+    font-size: 18px; /* Reduced size */
+    color: cyan;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and email */
+    text-shadow: 0 0 10px cyan;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    margin-bottom: 50px; /* Added more space below email */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Email Icon */
+.email::before {
+    content: "✉"; /* Mail icon */
+    font-size: 20px;
+}
+
+/* Hover Effect on Email */
+.email:hover {
+    color: white;
+    text-shadow: 0 0 15px cyan, 0 0 20px white;
+}
+
+/* Quote */
+blockquote {
+    font-style: italic;
+    font-size: 26px; /* Increased size */
+    color: #ccc; /* Softer white */
+    margin: 10px auto; /* Reduced top margin */
+    width: 75%;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Author */
+.author {
+    font-size: 22px;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-top: 5px; /* Reduced space between quote and author */
+}
+
+/* Hover Effect on Author */
+.author:hover {
+    text-shadow: 0 0 18px cyan, 0 0 25px white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .neon-text {
+        font-size: 30px;
+    }
+
+    .email {
+        font-size: 16px;
+        margin-bottom: 40px; /* Adjusted for mobile */
+    }
+
+    blockquote {
+        font-size: 24px; /* Increased further for mobile */
+        width: 90%;
+    }
+
+    .author {
+        font-size: 20px;
+        margin-top: 5px; /* Ensuring reduced space */
+    }
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-card {
+        width: 95%;
+        padding: 40px;
+    }
+
+    .cta-card h2, .neon-text {
+        font-size: 24px;
+    }
+
+    .cta-card p, blockquote {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+/* Ready to launch your startup & get in touch ends here*/
