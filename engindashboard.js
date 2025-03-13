@@ -17,3 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+//navigation of create startup button to html
+document.querySelector(".dashboard-item").addEventListener("click", function () {
+    window.location.href = "createstartup.html"; // Change this to your actual page URL
+});
+
