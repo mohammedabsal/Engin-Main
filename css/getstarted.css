@@ -1,0 +1,203 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #000;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Back to Home Link */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: cyan;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.back-link:hover {
+    color: white;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Form Container */
+.form-container {
+    background: linear-gradient(135deg, rgba(0, 10, 20, 0.9), rgba(0, 0, 0, 0.95));
+    padding: 50px;
+    border-radius: 20px;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+}
+
+/* Title Styling */
+.form-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.form-title span {
+    color: cyan;
+}
+
+/* Subtitle */
+.form-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: white;
+}
+
+/* Optional text style */
+.optional {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Dropdown Options */
+select option {
+    background: white;
+    color: black;
+}
+
+/* Hover & Focus Effects */
+input:hover, select:hover, textarea:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Insights Section */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: cyan;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: white;
+    color: cyan;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+
+    .form-subtitle {
+        font-size: 1rem;
+    }
+
+    input, select, textarea {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+    }
+
+    .back-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-subtitle {
+        font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+
+    .back-link {
+        font-size: 0.9rem;
+        top: 10px;
+        left: 10px;
+    }
+}
