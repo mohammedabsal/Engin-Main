@@ -31,9 +31,23 @@ body {
     align-items: center;
 }
 
+/* Navbar Logo Image */
 .navbar-logo {
     display: flex;
     align-items: center;
+    height: 100%; /* Ensure it takes the full height of the navbar */
+}
+
+.navbar-logo-image {
+    height: 25px; /* Adjust this to match the height of your navbar */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits perfectly */
+    margin-right: 10px; /* Add spacing if needed */
+}
+
+/* Remove the Engin text */
+.logo-text {
+    display: none; /* Hide the Engin text */
 }
 
 .navbar-logo i {
