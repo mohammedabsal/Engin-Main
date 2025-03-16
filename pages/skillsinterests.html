@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile</title>
+    <link rel="stylesheet" href="skillsinterests.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1 class="profile-title">Complete Your Profile</h1>
+        <p class="profile-subtitle">Help us personalize your experience</p>
+
+        <div class="progress-container">
+            <div class="step-box step-inactive">
+                <div class="step-number">1</div>
+                <span class="textstyle textnotactive">Basic Info</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step-box step-active">
+                <div class="step-number">2</div>
+                <span class="textstyle textactive">Skills & Interests</span>
+            </div>
+        </div>
+
+        <form id="profile-form">
+            <div class="input-group">
+                <label for="skills">What are your key skills?</label>
+                <textarea id="skills" class="input-field" placeholder="e.g., Python, React, Project Management" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Areas of Interest</label>
+                <div class="checkbox-container">
+                    <label><input type="checkbox"> AI/ML</label>
+                    <label><input type="checkbox"> Web Development</label>
+                    <label><input type="checkbox"> Mobile Apps</label>
+                    <label><input type="checkbox"> Blockchain</label>
+                    <label><input type="checkbox"> IoT</label>
+                    <label><input type="checkbox"> Cloud Computing</label>
+                    <label><input type="checkbox"> Data Science</label>
+                    <label><input type="checkbox"> Cybersecurity</label>
+                    <label><input type="checkbox"> Clean Tech</label>
+                    <label><input type="checkbox"> FinTech</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="experience">Years of Experience</label>
+                <select id="experience" class="input-field" required>
+                    <option>Select experience</option>
+                    <option>0-2 years</option>
+                    <option>3-5 years</option>
+                    <option>5-10 years</option>
+                    <option>10+ years</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="availability">Availability</label>
+                <select id="availability" class="input-field" required>
+                    <option>Select availability</option>
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Freelance</option>
+                    <option>Contract</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input type="url" id="linkedin" class="input-field" placeholder="https://www.linkedin.com/in/yourprofile" required>
+            </div>
+
+            <div class="input-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" class="input-field" placeholder="City, Country" required>
+            </div>
+
+            <br><br>
+
+            <div class="button-container">
+                <button type="button" class="back-button" id="back-btn">Back</button>
+                <button type="submit" class="next-button" id="next-btn">Complete Profile</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="skillsinterests.js"></script>
+</body>
+</html>
