@@ -1,16 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const roleButtons = document.querySelectorAll(".role-selection button");
     const signInBtn = document.querySelector(".signin-btn");
     const emailInput = document.querySelector("input[type='email']");
     const passwordInput = document.querySelector("input[type='password']");
-
-    // Role selection functionality
-    roleButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            roleButtons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
 
     // Function to show error messages (ensuring no overlap)
     function showError(input, message) {
@@ -22,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let parentDiv = input.parentNode;
         if (parentDiv.classList.contains("password-group")) {
-            parentDiv.insertBefore(errorSpan, input.nextSibling); // Ensure eye icon is not affected
+            parentDiv.insertBefore(errorSpan, input.nextSibling); // Ensures eye icon is not affected
         } else {
             parentDiv.appendChild(errorSpan);
         }
@@ -76,13 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = passwordInput.value.trim();
         let isValid = true;
 
-        // Check if a role is selected
-        const selectedRole = document.querySelector(".role-selection button.active");
-        if (!selectedRole) {
-            alert("Please select a role.");
-            isValid = false;
-        }
-
         // Email validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
@@ -95,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Password validation
         const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if (!passwordPattern.test(password)) {
-            showError(passwordInput, "Password must contain atleast 8 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character.");
+            showError(passwordInput, "Password must contain at least 8 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character.");
             isValid = false;
         } else {
             clearError(passwordInput);
@@ -103,8 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If valid, proceed with login
         if (isValid) {
-            window.location.href = "engindashboard.html"; //Navigating to engin dashboard after validating
+            window.location.href = "basicinfo.html"; // Navigating to dashboard after validation
         }
     });
 });
-

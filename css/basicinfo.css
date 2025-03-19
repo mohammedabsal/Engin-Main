@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Styles */
 body {
     background: linear-gradient(to right, #f9fafb, #e0e7ff);
@@ -189,3 +190,196 @@ body {
         padding: 12px;
     }
 }
+=======
+/* General Styles */
+body {
+    background: linear-gradient(to right, #f9fafb, #e0e7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container */
+.profile-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title and Subtitle */
+.profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.profile-subtitle {
+    font-size:15px;
+    color: gray;
+    margin-bottom: 25px;
+}
+
+/* Progress Indicator */
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+}
+
+.progress-circle {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.inactive {
+    background-color: lightgray;
+    color: gray;
+}
+
+.progress-text {
+    font-size: 16px !important;
+    font-weight: 500;
+    margin-left: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.inactive-text {
+    color: gray;
+}
+
+.progress-line {
+    flex: 1;
+    height: 2px;
+    background-color: lightgray;
+    margin: 0 10px;
+}
+
+/* Light Blue Text for "Basic Info" */
+.light-blue-text {
+    color: #4a90e2;
+}
+
+/* Input Fields */
+.input-container {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-right: 10px; /* Added right padding for spacing */
+}
+
+.input-label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border: 2px solid #2563eb;
+    outline: none;
+    background-color: #ebf8ff;
+}
+
+/* Textarea */
+.textarea-field {
+    resize: none;
+    height: 80px;
+}
+
+/* Button */
+.next-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #1e4dbd;
+}
+
+.next-button:active {
+    background-color: #153e9b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .progress-text, .inactive-text {
+        font-size: 12px;
+    }
+
+    .progress-circle {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .profile-title {
+        font-size: 22px;
+    }
+
+    .profile-subtitle {
+        font-size: 14px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .next-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+>>>>>>> fd2d23731d30ed0e6d777e49ea1b91bb9b146395

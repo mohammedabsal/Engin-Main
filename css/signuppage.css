@@ -1,0 +1,338 @@
+/* General styles */
+body {
+    background-color: #ebf4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container */
+.unique-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Titles */
+.unique-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.unique-subtitle {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Social login buttons */
+.unique-social-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.unique-social-login button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+}
+
+.unique-github {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.unique-github:hover {
+    background-color: #333;
+    color: white;
+}
+
+.unique-google {
+    background-color: #f3f3f3;
+    color: #db4437;
+}
+
+.unique-google:hover {
+    background-color: #db4437;
+    color: white;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* Divider */
+.unique-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: gray;
+}
+
+.unique-divider::before,
+.unique-divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid lightgray;
+    margin: 0 10px;
+}
+
+/* Role selection */
+.unique-role-text {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.unique-role-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.unique-role-selection button {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.unique-role-selection button i {
+    margin-right: 6px;
+}
+
+/* Active state */
+.unique-role-selection button.selected-role {
+    background-color: #ebf8ff;
+    color: #3182ce;
+    border: 1px solid #3182ce;
+}
+
+/* Ensure input groups have a fixed height */
+.unique-input-group {
+    position: relative;
+    margin-bottom: 13px; /* Increase spacing to fit error messages */
+    width: 100%;
+    min-height: 65px; /* Set a fixed height to avoid shifting */
+}
+
+.unique-input-group input {
+    width: 100%;
+    padding: 14px 10px 14px 40px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.unique-input-group input:focus {
+    border: 2px solid #3182ce;
+    outline: none;
+    background-color: #ebf8ff;
+}
+
+/* Ensure icons remain in place */
+.unique-input-group .unique-icon {
+    position: absolute;
+    left: 12px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: gray;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Password input styling */
+.unique-password-group {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+/* Error messages */
+.unique-error-message {
+    font-size: 12px;
+    color: red;
+    text-align: left;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-bottom: 10px;
+}
+
+/* Red border when input is invalid */
+.unique-error-border {
+    border: 2px solid red !important;
+}
+
+/* Options (Remember me & Forgot password) */
+.unique-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.unique-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.unique-checkbox input {
+    margin-right: 5px;
+    accent-color: #3182ce;
+}
+
+.unique-forgot-password {
+    color: #3182ce;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+/* Sign up button */
+.unique-signup-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.unique-signup-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Sign up text */
+.unique-signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.unique-signup-text a {
+    color: #3182ce;
+    text-decoration: none;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+/* Responsive Styles */
+
+/* Tablet & Mobile Screens */
+@media (max-width: 768px) {
+    .unique-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .unique-social-login {
+        flex-wrap: nowrap;
+    }
+
+    .unique-role-selection {
+        flex-direction: column;
+    }
+
+    .unique-role-selection button {
+        width: 100%;
+    }
+
+    .unique-options {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .unique-forgot-password {
+        margin-left: auto;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .unique-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .unique-title {
+        font-size: 24px;
+    }
+
+    .unique-subtitle {
+        font-size: 14px;
+    }
+
+    .unique-social-login button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .unique-role-selection {
+        flex-direction: column;
+    }
+
+    .unique-role-selection button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .unique-input-group input {
+        font-size: 14px;
+        padding: 12px 10px 12px 40px;
+    }
+
+    .unique-signup-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .unique-signup-text {
+        font-size: 13px;
+    }
+
+    .unique-options {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .unique-forgot-password {
+        margin-left: auto;
+    }
+}

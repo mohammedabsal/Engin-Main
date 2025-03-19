@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signuppage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="unique-container">
+        <h2 class="unique-title">Welcome</h2>
+        <p class="unique-subtitle">Sign up to continue your journey</p>
+
+        <br>
+
+        <div class="unique-social-login">
+            <button class="unique-github"><i class="fab fa-github"></i> GitHub</button>
+            <button class="unique-google"><i class="fab fa-google"></i> Google</button>
+        </div>
+
+        <br>
+
+        <div class="unique-divider">
+            <span>Or continue with</span>
+        </div>
+
+        <br>
+
+        <p class="unique-role-text">I am a...</p>
+        <div class="unique-role-selection">
+            <button id="unique-creator"><i class="fas fa-user"></i> Creator/Collaborator</button>
+            <button id="unique-mentor"><i class="fas fa-chalkboard-teacher"></i> Mentor</button>
+            <button id="unique-investor"><i class="fas fa-hand-holding-usd"></i> Investor</button>
+        </div>
+
+        <br><br>
+
+        <!-- First Name Field -->
+        <div class="unique-input-group">
+            <input type="text" id="unique-first-name" placeholder="First Name" required>
+            <i class="fas fa-user unique-icon"></i>
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="unique-input-group">
+            <input type="text" id="unique-last-name" placeholder="Last Name">
+            <i class="fas fa-user unique-icon"></i>
+        </div>
+
+        <div class="unique-input-group">
+            <input type="email" id="unique-email" placeholder="Email address">
+            <i class="fas fa-envelope unique-icon"></i>
+        </div>
+
+        <div class="unique-input-group unique-password-group">
+            <i class="unique-icon fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="unique-password">
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="unique-input-group unique-password-group">
+            <input type="password" id="unique-confirm-password" placeholder="Confirm Password">
+            <i class="fas fa-lock unique-icon"></i>
+        </div>
+
+        <div class="unique-options">
+            <label class="unique-checkbox">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </label>
+            <a href="#" class="unique-forgot-password">Forgot password?</a>
+        </div>
+
+        <button class="unique-signup-btn">Sign up</button>
+
+        <p class="unique-signup-text">Already have an account? <a href="signuplogin.html">Sign in</a></p>
+    </div>
+
+    <script src="signuppage.js"></script>
+</body>
+</html>

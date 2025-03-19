@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,3 +58,56 @@
     <script type="module" src="/backend/js/firebase-config.js"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile</title>
+    <link rel="stylesheet" href="basicinfo.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1 class="profile-title">Complete Your Profile</h1>
+        <p class="profile-subtitle">Help us personalize your experience</p>
+
+        <div class="progress-wrapper">
+            <div class="progress-step active">
+                <div class="progress-circle">1</div>
+                <span class="progress-text light-blue-text">Basic Info</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="progress-circle inactive">2</div>
+                <span class="progress-text inactive-text">Skills & Interests</span>
+            </div>
+        </div>
+
+        <br>
+
+        <form id="profile-form">
+            <div class="input-container">
+                <label for="user-role" class="input-label">What's your role?</label>
+                <input type="text" id="user-role" class="input-field" placeholder="e.g., Full Stack Developer, Product Manager" required>
+            </div>
+
+            <br> 
+
+            <div class="input-container">
+                <label for="user-about" class="input-label">Tell us about yourself</label>
+                <textarea id="user-about" class="input-field textarea-field" placeholder="Share your background, experience, and what drives you..." required></textarea>
+            </div>
+
+            <br> 
+            
+            <button id="next-step-btn" class="next-button">
+                Next Step &rarr;
+            </button>
+        </form>
+    </div>
+
+    <script src="basicinfo.js"></script>
+</body>
+</html>
+>>>>>>> fd2d23731d30ed0e6d777e49ea1b91bb9b146395
