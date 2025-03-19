@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engin Dashboard</title>
-    <link rel="stylesheet" href="engindashboard.css">
+    <link rel="stylesheet" href="/css/engindashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="navbar-container">
             <div class="navbar-left">
                 <div class="navbar-logo">
-                    <img src="Images/Engin-Logo.jpg" alt="Logo" class="navbar-logo-image"> 
+                    <img src="/Images/Engin-Logo.jpg" alt="Logo" class="navbar-logo-image"> 
                 </div>
             </div>
             <div class="navbar-right">
@@ -52,8 +52,10 @@
     <div class="dashboard-container">
         <div class="dashboard-grid">
             <div class="dashboard-item" data-action="create-startup">
-                <i class="fas fa-rocket icon"></i>
-                <span class="item-title">Create Startup</span>
+                <a href="createstartup.html">
+                    <i class="fas fa-rocket icon"></i>
+                    <span class="item-title">Create Startup</span>
+                </a>
             </div>
             <div class="dashboard-item" data-action="explore-startups">
                 <i class="fas fa-search icon"></i>

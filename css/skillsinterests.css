@@ -1,0 +1,166 @@
+/* General styles */
+body {
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Profile container */
+.profile-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Title */
+.profile-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-subtitle {
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.step-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    background-color: #d3d3d3;
+    color: #666;
+    margin-right: 5px;
+}
+
+.step-active .step-number {
+    background-color: #007bff;
+    color: white;
+}
+
+.textstyle{
+    font-size: 16px !important;
+    font-weight:500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.textnotactive{
+    color: gray;
+}
+.textactive{
+    color: #4a90e2;
+}
+
+/* Input fields */
+.input-group {
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+
+.input-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Checkbox container */
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.progress-line {
+    flex: 1;
+    height: 2px;
+    background-color: lightgray;
+    margin: 0 10px;
+}
+
+/* Responsive: Single column checkboxes on small screens */
+@media (max-width: 400px) {
+    .checkbox-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.back-button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 5px;
+}
+
+.next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    margin-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .profile-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    .back-button, .next-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

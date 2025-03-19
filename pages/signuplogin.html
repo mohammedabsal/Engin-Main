@@ -6,8 +6,10 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="../css/signuplogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 </head>
 <body>
+
     <div class="container">
         <h2 class="title">Welcome Back</h2>
         <p class="subtitle">Sign in to continue your journey</p>
@@ -46,7 +48,6 @@
             <input type="password" placeholder="Password" id="password">
         </div>
 
-
         <div class="options">
             <label class="checkbox">
                 <input type="checkbox">
@@ -60,6 +61,11 @@
         <p class="signup-text">Don't have an account? <a href="#">Sign up</a></p>
     </div>
 
-    <script src="../js/signuplogin.js"></script>
+    <!-- Firebase Configuration & Sign-In Script -->
+  
+    <script src="../backend/js/firebase-config.js" type="module"></script>
+<script src="../backend/js/signup-login.js" type="module"></script>
+
+
 </body>
 </html>
